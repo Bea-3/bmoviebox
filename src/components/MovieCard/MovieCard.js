@@ -7,7 +7,7 @@ const MovieCard = ({ movie }) => {
   const [genreList, setGenreList] = useState([]);
   const getGenre = () => {
     fetch(
-      "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1api_key=cb5b2df2e013fd040a05e5dce84b89e1"
+      "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=cb5b2df2e013fd040a05e5dce84b89e1"
     )
       .then((res) => res.json())
       .then((json) => setGenreList(json.genres))

@@ -15,10 +15,10 @@ export default function Home() {
 
   const getMovie = () => {
     fetch(
-      "https://api.themoviedb.org/3/discover/movie?api_key=cb5b2df2e013fd040a05e5dce84b89e1"
+      "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=cb5b2df2e013fd040a05e5dce84b89e1"
     )
       .then((res) => res.json())
-      .then((json) => setMovieList(json.results))
+      .then((json) => setMovieList(json.results.slice(0,10)))
       .catch((err) => console.error("error:" + err));
   };
   useEffect(() => {
