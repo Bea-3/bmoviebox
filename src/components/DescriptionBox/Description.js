@@ -20,7 +20,7 @@ const Description = () => {
       </div>
       <button className="flex px-[6px] py-[16px] items-center gap-2 bg-rose-700 w-[169px] h-9">
         <svg
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="https://www.w3.org/2000/svg"
           width="20"
           height="20"
           viewBox="0 0 20 20"
