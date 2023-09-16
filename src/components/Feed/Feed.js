@@ -1,10 +1,17 @@
 import Image from "next/image";
-import React from "react";
 
-const Feed = () => {
+const Feed = ({ movie }) => {
+  console.log(movie.poster_path);
+
   return (
     <div className=" text-black w-full  flex-grow p-6">
-      <div className=" mt-9 w-full h-[449px] border rounded-3xl  bg-[url('/Rectangle29.png')] bg-cover bg-center bg-no-repeat  flex items-center justify-center ">
+     
+     <div
+        className={` mt-9 w-full h-[449px] border rounded-3xl bg-[]  bg-cover bg-center bg-no-repeat  flex items-center justify-center `}
+        style={{
+          backgroundImage: `url(https://image.tmdb.org/t/p/w500${movie.backdrop_path})`,
+        }}
+      >
         <div className=" flex flex-col items-center ">
           <Image
             src={"/play.png"}
@@ -88,22 +95,18 @@ const Feed = () => {
           </span>
         </div>
       </div>
+
       <div className="grid grid-cols-12 py-5">
         <div className="col-span-9">
           <div className="p-5">
             <div className="flex flex-col max-w-[774px]  ">
               <div className="flex">
-                <span className="">Top Gun Maverick </span>
-                <span className="">. 2022</span>
-                <span className="">PG-13 . 2h 10m</span>
-                <span className="">Genre Genre</span>
+                <span className="font-bold" data-testid="movie-title">{movie.original_title}</span>
+                <span className="" data-testid="movie-release-date">{movie.release_date}</span>
+                <span className="" data-testid="movie-runtime">{movie.runtime}</span>
+                <span className="">{movie.genre_ids}</span>
               </div>
-              <div className="mt-5">
-                After thirty years, Maverick is still pushing the envelope as a
-                top naval aviator, but must confront ghosts of his past when he
-                leads TOP GUN's elite graduates on a mission that demands the
-                ultimate sacrifice from those chosen to fly it.
-              </div>
+              <div className="mt-5" data-testid="movie-overview">{movie.overview}</div>
             </div>
             <div className="flex flex-col justify-between gap-7">
               <div className="">

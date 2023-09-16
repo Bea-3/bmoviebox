@@ -7,7 +7,7 @@ const MovieCard = ({ movie }) => {
   const [genreList, setGenreList] = useState([]);
   const getGenre = () => {
     fetch(
-      "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=cb5b2df2e013fd040a05e5dce84b89e1"
+      "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=12fbd7e7f0bd7aa61ce8ac42ebf1a20d"
     )
       .then((res) => res.json())
       .then((json) => setGenreList(json.genres))
@@ -20,7 +20,7 @@ const MovieCard = ({ movie }) => {
   return (
     <div
       className="flex flex-col items-center gap-3 mb-14"
-      data-testid={"movie - card"}
+      data-testid={"movie-id"}
     >
       <Image
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -30,9 +30,7 @@ const MovieCard = ({ movie }) => {
         data-testid={"movie-poster"}
       />
       <div className="flex flex-col gap-3">
-        <span className="text-gray-400 text-[12px] font-bold font-sans not-italic">
-          {movie.release_date}
-        </span>
+        <span className="text-gray-400 text-[12px] font-bold font-sans not-italic" data-testid="movie-release-date">{movie.release_date}</span>
         <span
           className="text-gray-900 text-[16px] w-[250px] font-bold font-sans not-italic"
           data-testid={"movie-title"}

@@ -15,7 +15,7 @@ export default function Home() {
 
   const getMovie = () => {
     fetch(
-      "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=cb5b2df2e013fd040a05e5dce84b89e1"
+      "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=12fbd7e7f0bd7aa61ce8ac42ebf1a20d"
     )
       .then((res) => res.json())
       .then((json) => setMovieList(json.results.slice(0,10)))

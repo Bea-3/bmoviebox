@@ -1,8 +1,27 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Feed from "../../components/Feed/Feed";
 
-const movie = ({ params }) => {
+const Movie = ({ params }) => {
+  const movid = params.movieid;
+  const [movieObj, setMovieObj] = useState([]);
+
+  const getdMovie = () => {
+    fetch(
+      `https://api.themoviedb.org/3/movie/${movid}?api_key=12fbd7e7f0bd7aa61ce8ac42ebf1a20d`
+    )
+      .then((res) => res.json())
+      .then((json) => setMovieObj(json))
+      .catch((err) => console.error("error:" + err));
+  };
+  useEffect(() => {
+    getdMovie();
+  }, []);
+
+  console.log(movieObj);
+
   return (
     <div className="grid grid-cols-12   w-full ">
       {/* <div className="text-black ">movie: {params.movieid}</div> */}
@@ -12,7 +31,7 @@ const movie = ({ params }) => {
       </div>
       {/* Middle Component */}
       <div className="col-span-12 md:col-span-10">
-        <Feed />
+        <Feed movie={movieObj}/>
       </div>
       {/* Trailer */}
       {/* title and info */}
@@ -24,4 +43,4 @@ const movie = ({ params }) => {
   );
 };
 
-export default movie;
+export default Movie;
