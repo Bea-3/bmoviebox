@@ -5,7 +5,7 @@ const Title = () => {
     <div className=" ">
       <div className="flex mx-14 my-12 justify-between">
         <div className="text-3xl font-bold font-sans text-black">
-          Featured Movie
+          Top Rated
         </div>
         <div className="flex items-center ">
           <a href="*" className="text-rose-700">

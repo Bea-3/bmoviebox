@@ -6,7 +6,7 @@ const MovieCardRating = ({ movie }) => {
     <div className="flex w-[184px] h-[17px] justify-between  ">
       <div className="inline-flex items-center gap-[10px]">
         <Image
-          src={"/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1.png"}
+          src={"/4519120_imdb_icon.png"}
           width={35}
           height={17}
           alt="imdb"
@@ -18,7 +18,7 @@ const MovieCardRating = ({ movie }) => {
 
       <div className="inline-flex items-center gap-[10px]">
         <Image
-          src={"/PngItem_1381056 1.png"}
+          src={"/104338_tomato_icon.png"}
           width={16}
           height={17}
           alt="r-tomato"

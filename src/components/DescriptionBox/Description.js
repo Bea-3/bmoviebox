@@ -4,7 +4,7 @@ import Rating from "./Rating";
 
 const Description = () => {
   return (
-    <div className="inline-flex flex-col items-start gap-4">
+    <div className="inline-flex flex-col items-start gap-4 sm:d-block">
       <div className="w-[404px] text-[3.2vw]  font-Sans font-bold leading-[56px]">
         {" "}
         John Wick 3: Parabellum{" "}
@@ -33,6 +33,7 @@ const Description = () => {
             fill="white"
           />
         </svg>
+        
         <div className="uppercase font-bold leading-6 text-sm not-italic">
           {" "}
           WATCH TRAILER

@@ -46,7 +46,7 @@ export default function Home() {
       {/* FEATURED MOVIE */}
       <Title />
       <div className="grid text-black mx-14 my-3">
-        <div className="grid grid-cols-4 justify-center">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 justify-center">
           {/* {console.log(typeof movieList)} */}
           {movieList?.map((movie) => (
             <ul key={movie.id}>
