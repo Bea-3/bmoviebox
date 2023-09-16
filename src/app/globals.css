@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 100%),
+    url("/Poster.png"), lightgray 50% / cover no-repeat;
+}
+
+body {
+  color: white;
+  background: --background;
+}
+ {
+  border: 1px solid red;
+}
